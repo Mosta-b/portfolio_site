@@ -13,22 +13,57 @@ class SiteAppBar extends StatelessWidget implements PreferredSizeWidget {
       padding: EdgeInsets.symmetric(
         horizontal: _getHorizontalPadding(context),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            width: context.width < DeviceType.ipad.getMaxWidth()
-                ? context.width * .5
-                : context.width * .2,
-            child: Text(
-              "Mustapha BENNAI",
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium
-                  ?.copyWith(color: ColorsManger.secondaryColor),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 13),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: context.width < DeviceType.ipad.getMaxWidth()
+                  ? context.width * .5
+                  : context.width * .2,
+              child: FittedBox(
+                alignment: Alignment.center,
+                child: Text(
+                  "Mustapha BENNAI",
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        color: ColorsManger.secondaryColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              width: context.width < DeviceType.ipad.getMaxWidth()
+                  ? context.width * .5
+                  : context.width * .2,
+              child: FittedBox(
+                alignment: Alignment.center,
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text("Home"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text("About Me"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text("Projects"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text("Contact"),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
