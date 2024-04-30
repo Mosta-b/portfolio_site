@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "auto_size_text",
+      "rootUri": "file:///home/mosta/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///home/mosta/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -302,7 +308,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-04-30T14:08:13.688194Z",
+  "generated": "2024-04-30T17:54:14.081317Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
