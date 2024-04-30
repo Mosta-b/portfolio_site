@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_site/core/constant/theme/app_theme.dart';
-import 'package:portfolio_site/core/constant/theme/colors.dart';
+import 'package:portfolio_site/core/theme/app_theme.dart';
+import 'package:portfolio_site/core/theme/colors.dart';
 import 'package:portfolio_site/presentaion/views/main_view.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        scaffoldBackgroundColor: ColorsManger.backgroundColor,
+        scaffoldBackgroundColor: ColorsManger.primaryColor,
         textTheme: buildTextTheme(),
       ),
       home: const MainView(),

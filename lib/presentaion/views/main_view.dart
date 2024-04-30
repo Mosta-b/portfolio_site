@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/app_bar.dart';
+import '../widgets/appBar/app_bar.dart';
+import '../widgets/body/home_body.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -9,6 +10,7 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: SiteAppBar(),
+      body: HomeBody(),
     );
   }
 }
