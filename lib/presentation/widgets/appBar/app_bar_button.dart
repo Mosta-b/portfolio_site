@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_text_style.dart';
@@ -31,11 +32,8 @@ class AppBarButton extends StatelessWidget {
           foregroundColor: unSelectedColor,
           textStyle: MaterialStatePropertyAll<TextStyle>(TextStyleManger.s17),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            title,
-          ),
+        child: AutoSizeText(
+          title,
         ),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_site/core/extensions/app_extensions.dart';
-import 'package:portfolio_site/presentaion/widgets/body/me/about_me.dart';
+import 'package:portfolio_site/presentation/widgets/body/me/about_me.dart';
 
 class HomeBody extends StatefulWidget {
   const HomeBody({super.key});

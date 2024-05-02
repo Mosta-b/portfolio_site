@@ -3,6 +3,7 @@ import 'package:portfolio_site/core/constant/appBar/app_constants.dart';
 import 'package:portfolio_site/core/enum/enum.dart';
 import 'package:portfolio_site/core/theme/colors.dart';
 import 'package:portfolio_site/core/extensions/app_extensions.dart';
+import 'package:portfolio_site/presentation/widgets/appBar/menu_button.dart';
 
 import 'app_bar_actions.dart';
 import 'app_bar_title.dart';
@@ -23,11 +24,13 @@ class SiteAppBar extends StatelessWidget implements PreferredSizeWidget {
           width: context.width < DeviceType.ipad.getMaxWidth()
               ? context.width * .5
               : context.width * .2,
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              AppBarTitle(),
-              AppBarActions(),
+              const AppBarTitle(),
+              context.width > DeviceType.ipad.getMaxWidth()
+                  ? const AppBarActions()
+                  : const CustomMenuButton(),
             ],
           ),
         ),

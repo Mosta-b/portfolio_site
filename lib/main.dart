@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_site/core/theme/app_theme.dart';
 import 'package:portfolio_site/core/theme/colors.dart';
-import 'package:portfolio_site/presentaion/views/main_view.dart';
+import 'package:portfolio_site/presentation/views/main_view.dart';
 
 void main() {
   runApp(const MyApp());

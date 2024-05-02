@@ -13,6 +13,11 @@ abstract class TextStyleManger {
     fontSize: 32,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle s32p2 = TextStyle(
+    color: ColorsManger.secondaryColor,
+    fontSize: 32,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle s28 = TextStyle(
     color: ColorsManger.primaryColor,
     fontSize: 28,
