@@ -1,8 +1,8 @@
 part of 'home_control_bloc.dart';
 
 @immutable
-class HomeControlState {
-  final HomeControlModel homeControlModel;
+class HomeControlState extends Equatable {
+  final int homeControlModel;
   final bool isLoading;
   final Exception? exception;
 
@@ -11,4 +11,7 @@ class HomeControlState {
     required this.exception,
     required this.isLoading,
   });
+
+  @override
+  List<Object?> get props => [isLoading, homeControlModel];
 }
