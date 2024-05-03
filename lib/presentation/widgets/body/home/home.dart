@@ -48,8 +48,6 @@ class Home extends StatelessWidget {
                 children: [
                   Align(
                     alignment: Alignment.center,
-                    // heightFactor: 1.5,
-                    // widthFactor: 2,
                     child: Padding(
                       padding: EdgeInsets.only(
                         right: getScreenWidth(context) * .06,
