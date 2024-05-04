@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_site/core/extensions/app_extensions.dart';
@@ -75,18 +73,19 @@ class AboutMe extends StatelessWidget {
               flex: howLongIsGrid,
               child: GridView.builder(
                 itemCount: TechMap.techMapWithColor.length,
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 7,
+                  crossAxisSpacing: 7,
                 ),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   final techColor =
                       TechMap.techMapWithColor.keys.elementAt(index);
-
-                  final techTitle = TechMap.techMapWithColor[techColor]?.first;
-                  print(TechMap.techMapWithColor[techColor]);
+                  final techTitle =
+                      TechMap.techMapWithColor.values.elementAt(index).first;
                   final techImage =
-                      TechMap.techMapWithColor.values.elementAt(index)[1];
+                      TechMap.techMapWithColor.values.elementAt(index).last;
                   return TechCard(
                     title: techTitle,
                     image: techImage,

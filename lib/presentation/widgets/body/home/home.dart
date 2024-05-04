@@ -24,26 +24,35 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-              flex: 5,
+              flex: 50,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 textDirection: TextDirection.ltr,
                 children: [
-                  const Text(
-                    StringsManger.hi,
-                    style: TextStyleManger.s52,
+                  const Expanded(
+                    flex: 50,
+                    child: Align(
+                      alignment: Alignment.bottomLeft,
+                      child: AutoSizeText(
+                        StringsManger.hi,
+                        style: TextStyleManger.s52,
+                      ),
+                    ),
                   ),
                   AddHeight(height: getScreenHeight(context) * .02),
-                  const AutoSizeText(
-                    StringsManger.introduction,
-                    style: TextStyleManger.s24,
+                  const Expanded(
+                    flex: 50,
+                    child: AutoSizeText(
+                      StringsManger.introduction,
+                      style: TextStyleManger.s24,
+                    ),
                   ),
                 ],
               ),
             ),
             Expanded(
-              flex: 5,
+              flex: 50,
               child: Stack(
                 children: [
                   Align(

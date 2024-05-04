@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio_site/core/theme/app_theme.dart';
 import 'package:portfolio_site/core/theme/colors.dart';
+import 'package:portfolio_site/presentation/bloc/home_control_bloc.dart';
 import 'package:portfolio_site/presentation/views/main_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => HomeControlBloc(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
