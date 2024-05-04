@@ -1,14 +1,17 @@
+import 'dart:developer';
+
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:portfolio_site/core/extensions/app_extensions.dart';
 import 'package:portfolio_site/core/theme/app_text_style.dart';
 import 'package:portfolio_site/core/theme/colors.dart';
 import 'package:portfolio_site/core/utils/add_space.dart';
 import 'package:portfolio_site/core/utils/get_size.dart';
+import 'package:portfolio_site/presentation/widgets/body/me/tech_card.dart';
 
 import '../../../../core/constant/strings/strings_manger.dart';
+import '../../../../core/enum/enum.dart';
+import '../../../../data/tech_map.dart';
 import 'custom_divider.dart';
 
 class AboutMe extends StatelessWidget {
@@ -16,6 +19,10 @@ class AboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int howLongIsIntroduction =
+        context.width > DeviceType.ipad.getMaxWidth() ? 30 : 60;
+    final int howLongIsGrid =
+        context.width > DeviceType.ipad.getMaxWidth() ? 40 : 20;
     return SizedBox(
       height: getScreenHeight(context),
       child: Padding(
@@ -29,9 +36,9 @@ class AboutMe extends StatelessWidget {
               style: TextStyleManger.s32p2,
             ),
             const AddHeight(height: 10),
-            const Expanded(
-              flex: 40,
-              child: AutoSizeText(
+            Expanded(
+              flex: howLongIsIntroduction,
+              child: const AutoSizeText(
                 StringsManger.longIntroduction,
                 style: TextStyleManger.s18,
                 textAlign: TextAlign.justify,
@@ -57,7 +64,7 @@ class AboutMe extends StatelessWidget {
                   const AddWidth(width: 20),
                   const Flexible(
                     child: AutoSizeText(
-                      StringsManger.twoYearsExperience,
+                      "${StringsManger.twoYearsExperience}\nTech i use Are :",
                       style: TextStyleManger.s24,
                     ),
                   ),
@@ -65,22 +72,25 @@ class AboutMe extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 40,
+              flex: howLongIsGrid,
               child: GridView.builder(
-                itemCount: 7,
+                itemCount: TechMap.techMapWithColor.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 7,
                 ),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return const SizedBox(
-                    height: 100,
-                    width: 100,
-                    child: Card(
-                      child: Column(
-                        children: [Text("Firebase")],
-                      ),
-                    ),
+                  final techColor =
+                      TechMap.techMapWithColor.keys.elementAt(index);
+
+                  final techTitle = TechMap.techMapWithColor[techColor]?.first;
+                  print(TechMap.techMapWithColor[techColor]);
+                  final techImage =
+                      TechMap.techMapWithColor.values.elementAt(index)[1];
+                  return TechCard(
+                    title: techTitle,
+                    image: techImage,
+                    color: techColor,
                   );
                 },
               ),
