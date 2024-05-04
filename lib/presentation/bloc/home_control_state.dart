@@ -2,7 +2,7 @@ part of 'home_control_bloc.dart';
 
 @immutable
 class HomeControlState extends Equatable {
-  final int homeControlModel;
+  final HomeControlModel homeControlModel;
   final bool isLoading;
   final Exception? exception;
 

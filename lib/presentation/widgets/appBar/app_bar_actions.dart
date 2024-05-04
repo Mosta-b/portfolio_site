@@ -21,7 +21,6 @@ class AppBarActions extends StatelessWidget {
               AppBarHeaders.values.length,
               (index) => AppBarButton(
                 title: AppBarHeaders.values[index].getString(),
-                onPressed: () {},
                 index: index,
               ),
             ),

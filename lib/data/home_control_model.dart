@@ -1,9 +1,9 @@
-import '../core/enum/enum.dart';
-
 class HomeControlModel {
-  final AppBarHeaders partOfBody;
+  final int pageIndex;
+  final bool isEvent;
 
   const HomeControlModel({
-    required this.partOfBody,
+    required this.pageIndex,
+    required this.isEvent,
   });
 }

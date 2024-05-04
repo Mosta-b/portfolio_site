@@ -11,8 +11,8 @@ class HomeControlEventChange extends HomeControlEvent {
   const HomeControlEventChange({required this.appBarHeaders});
 }
 
-class HomeControlEventUpdateColorOfMenuButton extends HomeControlEvent {
+class HomeControlEventGoToPage extends HomeControlEvent {
   final int appBarHeaders;
 
-  const HomeControlEventUpdateColorOfMenuButton({required this.appBarHeaders});
+  const HomeControlEventGoToPage({required this.appBarHeaders});
 }

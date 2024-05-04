@@ -72,6 +72,7 @@ class AboutMe extends StatelessWidget {
             Expanded(
               flex: howLongIsGrid,
               child: GridView.builder(
+                padding: const EdgeInsets.all(8),
                 itemCount: TechMap.techMapWithColor.length,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
