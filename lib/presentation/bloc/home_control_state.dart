@@ -13,5 +13,5 @@ class HomeControlState extends Equatable {
   });
 
   @override
-  List<Object?> get props => [isLoading, homeControlModel];
+  List<Object?> get props => [homeControlModel.pageIndex];
 }

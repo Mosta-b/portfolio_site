@@ -16,7 +16,6 @@ class HomeControlBloc extends Bloc<HomeControlEvent, HomeControlState> {
             isLoading: true,
           ),
         ) {
-    on<HomeControlEvent>((event, emit) {});
     on<HomeControlEventChange>(
       (event, emit) {
         final numberOfIndex = event.appBarHeaders;
@@ -25,7 +24,7 @@ class HomeControlBloc extends Bloc<HomeControlEvent, HomeControlState> {
             homeControlModel:
                 HomeControlModel(pageIndex: numberOfIndex, isEvent: false),
             exception: null,
-            isLoading: !state.isLoading,
+            isLoading: false,
           ),
         );
       },
@@ -38,7 +37,7 @@ class HomeControlBloc extends Bloc<HomeControlEvent, HomeControlState> {
             homeControlModel:
                 HomeControlModel(pageIndex: numberOfIndex, isEvent: true),
             exception: null,
-            isLoading: !state.isLoading,
+            isLoading: false,
           ),
         );
       },
