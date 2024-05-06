@@ -10,7 +10,7 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeControlBloc, HomeControlState>(
+    return BlocBuilder<HomeControlBloc, ControlState>(
       builder: (context, state) {
         return const Scaffold(
           appBar: SiteAppBar(),

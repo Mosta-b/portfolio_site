@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,13 +22,10 @@ class AppBarButton extends StatelessWidget {
     // const unSelectedColor = MaterialStatePropertyAll<Color>(Colors.white);
     const selectedColor =
         MaterialStatePropertyAll<Color>(ColorsManger.secondaryColor);
-    return BlocBuilder<HomeControlBloc, HomeControlState>(
+    return BlocBuilder<HomeControlBloc, ControlState>(
       builder: (context, state) {
-        if (index == 1) {
-          log("$index =>  ${state.homeControlModel.pageIndex}");
-        }
-
-        bool isSelected = state.homeControlModel.pageIndex == index;
+        bool isSelected =
+            context.read<HomeControlBloc>().appBarHeaderIndex == index;
         // bool isHovering = false;
         return Padding(
           padding: const EdgeInsets.all(8.0),

@@ -32,15 +32,13 @@ class _HomeBodyState extends State<HomeBody> {
     double homeHeight = home.currentContext!.size!.height;
     double aboutHeight = aboutMe.currentContext!.size!.height;
     _scrollController.addListener(() {
-      // int currentPage =
-      //     (_scrollController.offset / MediaQuery.of(context).size.width)
-      //         .round();
       double controllerHeight = _scrollController.offset;
       if (_scrollController.position.extentAfter == 0.0) {
         context
             .read<HomeControlBloc>()
             .add(const HomeControlEventChange(appBarHeaders: 0));
-      } else if (controllerHeight < homeHeight) {
+      }
+      if (controllerHeight < homeHeight) {
         context
             .read<HomeControlBloc>()
             .add(const HomeControlEventChange(appBarHeaders: 0));
@@ -53,11 +51,11 @@ class _HomeBodyState extends State<HomeBody> {
       //     (introHeight + aboutHeight + projectHeight)) {
       //   context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(2));
       // }
-      else {
-        context
-            .read<HomeControlBloc>()
-            .add(const HomeControlEventChange(appBarHeaders: 0));
-      }
+      // else {
+      //   context
+      //       .read<HomeControlBloc>()
+      //       .add(const HomeControlEventChange(appBarHeaders: 0));
+      // }
     });
   }
 
@@ -69,18 +67,11 @@ class _HomeBodyState extends State<HomeBody> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<HomeControlBloc, HomeControlState>(
+    return BlocConsumer<HomeControlBloc, ControlState>(
       listener: (context, state) {
-        const duration = Duration(milliseconds: 300);
-        if (state.homeControlModel.isEvent) {
-          // double offset = state.homeControlModel.pageIndex *
-          //     MediaQuery.of(context).size.width;
-
-          // _scrollController.animateTo(
-          //   offset,
-          //   duration: duration,
-          //   curve: Curves.easeInOut,
-          // );
+        const duration = Duration(milliseconds: 500);
+        log("$ControlState new state");
+        if (state is HomeControlState) {
           int currentPage = state.homeControlModel.pageIndex;
           log("$currentPage this is current page");
           if (currentPage == 0) {
@@ -102,13 +93,16 @@ class _HomeBodyState extends State<HomeBody> {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: context.width * .08),
-              child: SingleChildScrollView(
-                controller: _scrollController,
-                child: Column(
-                  children: [
-                    Home(key: home),
-                    AboutMe(key: aboutMe),
-                  ],
+              child: ScrollConfiguration(
+                behavior: const ScrollBehavior().copyWith(scrollbars: false),
+                child: SingleChildScrollView(
+                  controller: _scrollController,
+                  child: Column(
+                    children: [
+                      Home(key: home),
+                      AboutMe(key: aboutMe),
+                    ],
+                  ),
                 ),
               ),
             )

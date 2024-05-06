@@ -1,7 +1,16 @@
 part of 'home_control_bloc.dart';
 
 @immutable
-class HomeControlState extends Equatable {
+abstract class ControlState {
+  const ControlState();
+}
+
+class ControlStateInitial extends ControlState {
+  const ControlStateInitial();
+}
+
+@immutable
+class HomeControlState extends ControlState with EquatableMixin {
   final HomeControlModel homeControlModel;
   final bool isLoading;
   final Exception? exception;
@@ -10,6 +19,18 @@ class HomeControlState extends Equatable {
     required this.homeControlModel,
     required this.exception,
     required this.isLoading,
+  });
+
+  @override
+  List<Object?> get props => [homeControlModel.pageIndex];
+}
+
+@immutable
+class HomeControlColorState extends ControlState with EquatableMixin {
+  final HomeControlModel homeControlModel;
+
+  const HomeControlColorState({
+    required this.homeControlModel,
   });
 
   @override
