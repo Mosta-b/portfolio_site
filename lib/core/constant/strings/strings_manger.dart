@@ -14,4 +14,5 @@ class StringsManger {
   static const twoYears = "2 +";
   static const twoYearsExperience =
       """Of working with latest technology, to ensure good user experience, fast apps, and elegant UI""";
+  static const featuredProjects = "Featured Projects";
 }

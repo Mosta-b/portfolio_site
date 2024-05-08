@@ -6,6 +6,7 @@ import 'package:portfolio_site/core/extensions/app_extensions.dart';
 import 'package:portfolio_site/presentation/bloc/home_control_bloc.dart';
 import 'package:portfolio_site/presentation/widgets/body/home/home.dart';
 
+import '../projects/projects.dart';
 import 'me/about_me.dart';
 
 class HomeBody extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomeBodyState extends State<HomeBody> {
   final ScrollController _scrollController = ScrollController();
   final home = GlobalKey();
   final aboutMe = GlobalKey();
+  final projects = GlobalKey();
 
   @override
   void initState() {
@@ -31,6 +33,7 @@ class _HomeBodyState extends State<HomeBody> {
   void _initListenerForInteractWithHeaderIndex() {
     double homeHeight = home.currentContext!.size!.height;
     double aboutHeight = aboutMe.currentContext!.size!.height;
+    double projectsHeight = projects.currentContext!.size!.height;
     _scrollController.addListener(() {
       double controllerHeight = _scrollController.offset;
       if (_scrollController.position.extentAfter == 0.0) {
@@ -46,16 +49,16 @@ class _HomeBodyState extends State<HomeBody> {
         context
             .read<HomeControlBloc>()
             .add(const HomeControlEventChange(appBarHeaders: 1));
+      } else if (controllerHeight <
+          (homeHeight + aboutHeight + projectsHeight)) {
+        context
+            .read<HomeControlBloc>()
+            .add(const HomeControlEventChange(appBarHeaders: 2));
+      } else {
+        context
+            .read<HomeControlBloc>()
+            .add(const HomeControlEventChange(appBarHeaders: 0));
       }
-      // else if (controllerHeight <
-      //     (introHeight + aboutHeight + projectHeight)) {
-      //   context.read<HomeBloc>().add(ChangeAppBarHeadersColorByColor(2));
-      // }
-      // else {
-      //   context
-      //       .read<HomeControlBloc>()
-      //       .add(const HomeControlEventChange(appBarHeaders: 0));
-      // }
     });
   }
 
@@ -70,7 +73,7 @@ class _HomeBodyState extends State<HomeBody> {
     return BlocConsumer<HomeControlBloc, ControlState>(
       listener: (context, state) {
         const duration = Duration(milliseconds: 500);
-        log("$ControlState new state");
+
         if (state is HomeControlState) {
           int currentPage = state.homeControlModel.pageIndex;
           log("$currentPage this is current page");
@@ -86,9 +89,16 @@ class _HomeBodyState extends State<HomeBody> {
               duration: duration,
             );
           }
+          if (currentPage == 2) {
+            Scrollable.ensureVisible(
+              projects.currentContext!,
+              duration: duration,
+            );
+          }
         }
       },
       builder: (context, state) {
+        log("$ControlState new state");
         return Stack(
           children: [
             Padding(
@@ -101,6 +111,7 @@ class _HomeBodyState extends State<HomeBody> {
                     children: [
                       Home(key: home),
                       AboutMe(key: aboutMe),
+                      Projects(key: projects),
                     ],
                   ),
                 ),

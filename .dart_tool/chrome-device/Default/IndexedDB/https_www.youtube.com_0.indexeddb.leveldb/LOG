@@ -1,5 +1,14 @@
-2024/05/03-14:29:33.582 bca1 Reusing MANIFEST /tmp/flutter_tools.NGRWBV/flutter_tools_chrome_device.IEQPMC/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/05/03-14:29:33.583 bca1 Recovering log #34
-2024/05/03-14:29:33.601 bca1 Reusing old log /tmp/flutter_tools.NGRWBV/flutter_tools_chrome_device.IEQPMC/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000034.log 
-2024/05/03-14:29:33.601 bca1 Delete type=2 #26
-2024/05/03-14:29:33.602 bca1 Delete type=0 #23
+2024/05/06-19:28:13.924 aad8 Reusing MANIFEST /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/06-19:28:13.924 aad8 Recovering log #34
+2024/05/06-19:28:13.938 aad8 Reusing old log /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000034.log 
+2024/05/06-19:28:13.938 aad8 Delete type=2 #26
+2024/05/06-19:28:13.938 aad8 Delete type=0 #23
+2024/05/06-19:28:33.449 aac9 Level-0 table #39: started
+2024/05/06-19:28:33.459 aac9 Level-0 table #39: 1418827 bytes OK
+2024/05/06-19:28:33.460 aac9 Delete type=0 #34
+2024/05/06-19:33:07.379 aaca Compacting 1@1 + 1@2 files
+2024/05/06-19:33:07.384 aaca Generated table #40@1: 422 keys, 58816 bytes
+2024/05/06-19:33:07.384 aaca Compacted 1@1 + 1@2 files => 58816 bytes
+2024/05/06-19:33:07.384 aaca compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/05/06-19:33:07.384 aaca Delete type=2 #36
+2024/05/06-19:33:07.384 aaca Delete type=2 #39

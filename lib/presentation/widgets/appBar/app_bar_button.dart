@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,6 +26,7 @@ class AppBarButton extends StatelessWidget {
         MaterialStatePropertyAll<Color>(ColorsManger.secondaryColor);
     return BlocBuilder<HomeControlBloc, ControlState>(
       builder: (context, state) {
+        log("button index => ${context.read<HomeControlBloc>().appBarHeaderIndex}");
         bool isSelected =
             context.read<HomeControlBloc>().appBarHeaderIndex == index;
         // bool isHovering = false;
