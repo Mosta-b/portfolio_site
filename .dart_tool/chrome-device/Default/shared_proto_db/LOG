@@ -1,12 +1,10 @@
-2024/05/06-19:27:29.094 aac9 Reusing MANIFEST /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/shared_proto_db/MANIFEST-000001
-2024/05/06-19:27:29.095 aac9 Recovering log #10
-2024/05/06-19:27:29.095 aac9 Reusing old log /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/shared_proto_db/000010.log 
-2024/05/06-19:27:29.095 aac9 Delete type=0 #7
-2024/05/06-19:27:29.095 aac9 Delete type=0 #4
-2024/05/06-19:27:29.095 aac9 Delete type=0 #3
-2024/05/06-19:29:28.395 aac9 Compacting 1@0 + 1@1 files
-2024/05/06-19:29:28.397 aac9 Generated table #13@0: 673 keys, 69020 bytes
-2024/05/06-19:29:28.397 aac9 Compacted 1@0 + 1@1 files => 69020 bytes
-2024/05/06-19:29:28.397 aac9 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/05/06-19:29:28.397 aac9 Delete type=2 #8
-2024/05/06-19:29:28.397 aac9 Delete type=2 #11
+2024/05/09-16:23:34.503 104ff Reusing MANIFEST /tmp/flutter_tools.WNGSUF/flutter_tools_chrome_device.GVRDBR/Default/shared_proto_db/MANIFEST-000001
+2024/05/09-16:23:34.504 104ff Recovering log #10
+2024/05/09-16:23:34.504 104ff Reusing old log /tmp/flutter_tools.WNGSUF/flutter_tools_chrome_device.GVRDBR/Default/shared_proto_db/000010.log 
+2024/05/09-16:23:34.504 104ff Delete type=0 #7
+2024/05/09-16:23:34.504 104ff Delete type=0 #4
+2024/05/09-16:23:34.505 104ff Delete type=2 #8
+2024/05/09-16:23:34.506 104ff Delete type=2 #11
+2024/05/09-16:23:34.506 104ff Delete type=0 #3
+2024/05/09-16:23:34.506 104ff Delete type=2 #13
+2024/05/09-16:23:34.506 104ff Delete type=2 #5

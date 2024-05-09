@@ -15,4 +15,7 @@ class StringsManger {
   static const twoYearsExperience =
       """Of working with latest technology, to ensure good user experience, fast apps, and elegant UI""";
   static const featuredProjects = "Featured Projects";
+  static const featuredProjectsAbout =
+      "Embarked on my Flutter development journey by building a note app to solidify my understanding of Firebase and local data storage with SQLite."
+      """This experience laid the foundation for tackling my current project, an ambitious e-service app that integrates seamlessly with two other applications.""";
 }

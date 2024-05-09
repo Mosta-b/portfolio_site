@@ -1,12 +1,7 @@
-2024/05/06-19:27:28.047 aac9 Reusing MANIFEST /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/Sync Data/LevelDB/MANIFEST-000001
-2024/05/06-19:27:28.099 aac9 Recovering log #10
-2024/05/06-19:27:28.100 aac9 Reusing old log /tmp/flutter_tools.HLYZGP/flutter_tools_chrome_device.MQEZAC/Default/Sync Data/LevelDB/000010.log 
-2024/05/06-19:27:28.101 aac9 Delete type=0 #7
-2024/05/06-19:27:28.101 aac9 Delete type=0 #4
-2024/05/06-19:27:28.101 aac9 Delete type=0 #3
-2024/05/06-19:27:30.036 aad8 Level-0 table #14: started
-2024/05/06-19:27:30.038 aad8 Level-0 table #14: 80704 bytes OK
-2024/05/06-19:27:30.039 aad8 Delete type=0 #10
-2024/05/06-19:48:58.149 aaca Level-0 table #16: started
-2024/05/06-19:48:58.155 aaca Level-0 table #16: 92562 bytes OK
-2024/05/06-19:48:58.160 aaca Delete type=0 #13
+2024/05/09-16:23:33.193 1050d Reusing MANIFEST /tmp/flutter_tools.WNGSUF/flutter_tools_chrome_device.GVRDBR/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/05/09-16:23:33.201 1050d Recovering log #15
+2024/05/09-16:23:33.206 1050d Reusing old log /tmp/flutter_tools.WNGSUF/flutter_tools_chrome_device.GVRDBR/Default/Sync Data/LevelDB/000015.log 
+2024/05/09-16:23:33.206 1050d Delete type=0 #7
+2024/05/09-16:23:33.206 1050d Delete type=0 #4
+2024/05/09-16:23:33.206 1050d Delete type=0 #10
+2024/05/09-16:23:33.206 1050d Delete type=0 #3

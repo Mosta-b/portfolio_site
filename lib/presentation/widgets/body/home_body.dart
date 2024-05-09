@@ -108,6 +108,7 @@ class _HomeBodyState extends State<HomeBody> {
                 child: SingleChildScrollView(
                   controller: _scrollController,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Home(key: home),
                       AboutMe(key: aboutMe),

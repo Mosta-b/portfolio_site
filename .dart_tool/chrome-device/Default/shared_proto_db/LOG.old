@@ -1,8 +1,14 @@
-2024/05/06-15:12:20.105 74da Reusing MANIFEST /tmp/flutter_tools.UJNTNN/flutter_tools_chrome_device.JLUFVD/Default/shared_proto_db/MANIFEST-000001
-2024/05/06-15:12:20.105 74da Recovering log #7
-2024/05/06-15:12:20.112 74da Reusing old log /tmp/flutter_tools.UJNTNN/flutter_tools_chrome_device.JLUFVD/Default/shared_proto_db/000007.log 
-2024/05/06-15:12:20.112 74da Delete type=0 #4
-2024/05/06-15:12:20.112 74da Delete type=0 #3
-2024/05/06-15:12:38.588 74cb Level-0 table #11: started
-2024/05/06-15:12:38.590 74cb Level-0 table #11: 124631 bytes OK
-2024/05/06-15:12:38.591 74cb Delete type=0 #7
+2024/05/08-23:45:33.496 f433 Reusing MANIFEST /tmp/flutter_tools.RNQTOD/flutter_tools_chrome_device.TDXPYG/Default/shared_proto_db/MANIFEST-000001
+2024/05/08-23:45:33.496 f433 Recovering log #10
+2024/05/08-23:45:33.496 f433 Reusing old log /tmp/flutter_tools.RNQTOD/flutter_tools_chrome_device.TDXPYG/Default/shared_proto_db/000010.log 
+2024/05/08-23:45:33.497 f433 Delete type=0 #7
+2024/05/08-23:45:33.497 f433 Delete type=0 #4
+2024/05/08-23:45:33.497 f433 Delete type=2 #8
+2024/05/08-23:45:33.497 f433 Delete type=2 #11
+2024/05/08-23:45:33.499 f433 Delete type=0 #3
+2024/05/08-23:47:49.833 f41f Compacting 1@1 + 1@2 files
+2024/05/08-23:47:49.837 f41f Generated table #15@1: 317 keys, 86713 bytes
+2024/05/08-23:47:49.837 f41f Compacted 1@1 + 1@2 files => 86713 bytes
+2024/05/08-23:47:49.837 f41f compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/05/08-23:47:49.837 f41f Delete type=2 #13
+2024/05/08-23:47:49.838 f41f Delete type=2 #5
